@@ -3,6 +3,7 @@ FROM node:8.9.4
 # Add our xvfb script
 ADD xvfb /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
+ENV DISPLAY :99
 
 # Install Chrome
 RUN apt-get update && apt-get install -y wget --no-install-recommends \
