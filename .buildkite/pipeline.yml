@@ -1,0 +1,5 @@
+steps:
+  - name: ":docker:"
+    command: "docker build ."
+    agents:
+      queue: builders
