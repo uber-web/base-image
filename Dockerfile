@@ -1,6 +1,7 @@
 FROM node:8.9.4
 
 # Add our xvfb script
+RUN apt-get update && apt-get -y install libxi-dev libgl1-mesa-dev xvfb
 ADD xvfb /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
 ENV DISPLAY :99
