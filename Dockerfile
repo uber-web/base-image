@@ -1,4 +1,4 @@
-FROM node:8.11.1
+FROM node:8.11.3
 
 RUN yarn global add yarn@1.6.0
 
