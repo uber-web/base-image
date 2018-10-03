@@ -1,6 +1,6 @@
 FROM node:8.12.0
 
-RUN yarn global add yarn@1.9.4
+RUN yarn global add yarn@1.10.1
 
 # Add our xvfb script
 RUN apt-get update && apt-get -y install libxi-dev libgl1-mesa-dev xvfb
