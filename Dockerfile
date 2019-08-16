@@ -1,4 +1,4 @@
-FROM node:10.16.0
+FROM node:10.16.3
 
 RUN yarn global add yarn@1.16.0
 
