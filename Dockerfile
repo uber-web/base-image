@@ -1,6 +1,6 @@
-FROM node:10.16.0
+FROM node:10.16.3
 
-RUN yarn global add yarn@1.16.0
+RUN yarn global add yarn@1.19.0
 
 # Add our xvfb script
 RUN apt-get update && apt-get -y install jq libxi-dev libgl1-mesa-dev xvfb
@@ -17,5 +17,4 @@ RUN apt-get update && apt-get install -y wget --no-install-recommends \
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /src/*.deb \
-  # Intall node-gyp in the base image to get around parallel installation issues
   && npx node-gyp@4 install
