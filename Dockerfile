@@ -17,5 +17,4 @@ RUN apt-get update && apt-get install -y wget --no-install-recommends \
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /src/*.deb \
-  # Intall node-gyp in the base image to get around parallel installation issues
   && npx node-gyp@4 install
