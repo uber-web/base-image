@@ -16,4 +16,5 @@ RUN apt-get update && apt-get install -y wget --no-install-recommends \
   && apt-get install -y google-chrome-unstable \
   --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \
-  && rm -rf /src/*.deb
+  && rm -rf /src/*.deb \
+  && npx node-gyp@4 install
