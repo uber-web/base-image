@@ -1,6 +1,6 @@
-FROM node:10.16.3
+FROM node:8.15.1
 
-RUN yarn global add yarn@1.19.1
+RUN yarn global add yarn@1.13.0
 
 # Add our xvfb script
 RUN apt-get update && apt-get -y install jq libxi-dev libgl1-mesa-dev xvfb
