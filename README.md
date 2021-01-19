@@ -1,6 +1,6 @@
 # base-image
 
-Base docker image for web projects
+Base docker image for web projects.
 
 ## Developing
 
