@@ -1,4 +1,4 @@
-FROM node:14.15.4-buster
+FROM node:14.16.1-buster
 
 RUN yarn global add yarn@1.19.1
 
