@@ -8,6 +8,9 @@ ADD xvfb /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
 ENV DISPLAY :99
 
+# Install noto fonts for CJK/Thai/India support
+RUN apt-get update && apt-get -y install fonts-noto-core fonts-noto-cjk
+
 # Install Chrome
 RUN apt-get update && apt-get install -y wget --no-install-recommends \
   && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
