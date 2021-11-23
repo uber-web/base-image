@@ -2,22 +2,10 @@
 
 Base docker image for web projects.
 
-## Developing
+## Publishing images for new Node versions
 
-Make changes then run `docker build .` to build the image locally.
+Run `./publish.sh [base-version]`. This will update the Dockerfile and publish the image to [DockerHub](https://hub.docker.com/r/uber/web-base-image/tags)
 
-## Releasing
+For example: `./publish.sh 14.18.0-buster`
 
-In 2021 Dockerhub disabled automated builds for our current account tier. This means we have to manually grant access to Dockerhub and manually push images. To do so, we first have to build, then push:
-
-```
-# Build the docker image
-docker build -t <tag> .
-
-# Push the docker image
-docker push <tag>
-
-# Exmample with tag:
-docker build -t uber/web-base-image:14.18.0-buster .
-docker push uber/web-base-image:14.18.0-buster
-```
+Don't forget to commit changes
