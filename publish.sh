@@ -7,9 +7,9 @@ function run {(
   validate "${version}"
 
   curr=$(get_current_version)
-  replace "s/FROM node:${curr}/FROM node:${version}/" "$(root)/Dockerfile"
+  replace "s/FROM node:${curr}/FROM node:${version}-buster/" "$(root)/Dockerfile"
 
-  tag="uber/web-base-image:${version}"
+  tag="uber/web-base-image:${version}-buster"
   info "Building ${tag}"
   if ! docker build -q -t "${tag}" $(root)
   then
