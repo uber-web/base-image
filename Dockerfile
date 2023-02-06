@@ -1,4 +1,4 @@
-FROM node:18.12.0-buster
+FROM --platform=linux/amd64 node:18.12.0-buster
 
 RUN yarn global add yarn@1.19.1
 
